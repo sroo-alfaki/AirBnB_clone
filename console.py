@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""The cmd Module.
-for building line-oriented command interpreters
+"""The cmd Module
 """
 import cmd
 
