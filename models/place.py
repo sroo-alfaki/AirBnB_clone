@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 from typing import List
 
 class Place(BaseModel):
+    """Place class that inherits from BaseModel."""
     city_id: str = ""
     user_id: str = ""
     name: str = ""
