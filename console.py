@@ -11,8 +11,19 @@ from models.place import Place
 from models.review import Review
 from datetime import datetime
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
+
+    CLASSES = {
+            'BaseModel': BaseModel,
+            'User': User,
+            'State': State,
+            'City': City,
+            'Amenity': Amenity,
+            'Place': Place,
+            'Review': Review
+            }
 
     def emptyline(self):
         """Do nothing on an empty line or ENTER shouldn’t execute anything"""
