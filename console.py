@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""The cmd Module.
+for building line-oriented command interpreters
+"""
 import cmd
 
 class HBNBCommand(cmd.Cmd):
