@@ -10,7 +10,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from datetime import datetime
-
+"from models import storage"
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
@@ -27,6 +27,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """Do nothing on an empty line or ENTER shouldn’t execute anything"""
+        pass
     
     def do_EOF(self, line):
         """EOF to exit the program"""
@@ -44,18 +45,17 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, line):
          """Creates a new instance of BaseModel, saves it (to the JSON file)"""
-        args = line.split()
-        if not args:
+         args = line.split()
+         if not args:
              print("** class name missing **")
-            return
-        try:
-            class_name = args[0]
-            item = self.CLASSES[class_name]()
-            item.save()
-            print(item.id)
-
-        except ImportError:
-            print("** class doesn't exist **")
+             return
+         try:
+             class_name = args[0]
+             item = self.CLASSES[class_name]()
+             item.save()
+             print(item.id)
+         except ImportError:
+             print("** class doesn't exist **")
 
     def do_show(self, line):
         """Prints the string representation of an instance based on the class name and id."""
