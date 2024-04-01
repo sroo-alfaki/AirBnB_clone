@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-color: #484848;
+	font-size: 14px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo {
+	margin-left: 20px;
+	height: 30px;
+	width: 30px;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+footer {
+	height: 60px;
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+}
+
+footer span {
+	color: white;
+}
+
+button:hover {
+	opacity: 0.9;
+}
